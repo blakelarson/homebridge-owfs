@@ -1,0 +1,23 @@
+{
+  "name": "homebridge-owfs",
+  "version": "0.1.0",
+  "description": "Used to view and control Dallas Semiconductor 1-Wire Systems via owfs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakelarson/homebridge-owfs.git"
+  },
+  "keywords": [
+    "homebridge",
+    "owfs"
+  ],
+  "author": "Blake Larson <npm@blakelarson.com> (http://blakelarson.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blakelarson/homebridge-owfs/issues"
+  },
+  "homepage": "https://github.com/blakelarson/homebridge-owfs#readme"
+}
