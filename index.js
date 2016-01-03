@@ -5,10 +5,10 @@ var Service, Characteristic;
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-owfs", "owfs", TemperatureAccessory);
+  homebridge.registerPlatform("homebridge-owfs", "owfs", owfsPlatform);
 }
 
-function TemperatureAccessory(log, config) {
+function owfsPlatform(log, config) {
   this.log = log;
   this.name = config["name"];
   this.device = config["device"];
@@ -20,14 +20,13 @@ function TemperatureAccessory(log, config) {
     .on('get', this.getState.bind(this));
 }
 
-TemperatureAccessory.prototype.getState = function(callback) {
-  ds18b20.temperature(this.device, function(err,value){
+owfsPlatform.prototype.getState = function(callback) {
+  owCon.read(this.device + '/temperature', function(err, result){
     callback(err, value);
   });
 }
 
-TemperatureAccessory.prototype.getServices = function() {
+owfsPlatform.prototype.getServices = function() {
   return [this.service];
 }
-
 
