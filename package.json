@@ -14,7 +14,7 @@
     "homebridge-plugin",
     "owfs"
   ],
-  "enginers": {
+  "engines": {
     "homebridge": ">=0.2.0"
   },
   "author": "Blake Larson <npm@blakelarson.com> (http://blakelarson.com)",
