@@ -11,9 +11,12 @@
     "url": "git+https://github.com/blakelarson/homebridge-owfs.git"
   },
   "keywords": [
-    "homebridge",
+    "homebridge-plugins",
     "owfs"
   ],
+  "enginers": {
+    "homebridge": ">=0.2.0"
+  },
   "author": "Blake Larson <npm@blakelarson.com> (http://blakelarson.com)",
   "license": "ISC",
   "bugs": {
